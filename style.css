@@ -93,7 +93,7 @@ header {
 
 /* Seção Hero (Banner Inicial) */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1200') no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/img-campo.png') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     justify-content: center;
