@@ -1,22 +1,18 @@
-/* Configurações Gerais */
-// Aguarda o documento ser totalmente carregado
-document.addEventListener("DOMContentLoaded", function() {
-    
-    // Seleciona o botão de hambúrguer e a lista de links
-    const hamburger = document.getElementById("hamburger");
-    const navLinks = document.getElementById("nav-links");
-    const links = document.querySelectorAll(".nav-links li a");
+// Seleciona os elementos do menu hambúrguer e da navegação
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector(".nav-menu");
+const navLinks = document.querySelectorAll(".nav-menu a");
 
-    // Adiciona o evento de clique no hambúrguer
-    hamburger.addEventListener("click", function() {
-        // Alterna a classe 'active', que faz o menu aparecer ou desaparecer no CSS
-        navLinks.classList.toggle("active");
-    });
+// Função para ativar/desativar o menu hambúrguer
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+});
 
-    // Faz com que o menu feche automaticamente após clicar em uma das opções
-    links.forEach(link => {
-        link.addEventListener("click", () => {
-            navLinks.classList.remove("active");
-        });
+// Fecha o menu móvel de forma automática assim que o usuário clica em um tópico
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
     });
 });
